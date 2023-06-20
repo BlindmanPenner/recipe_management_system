@@ -1,0 +1,11 @@
+<h1>Add Recipes to <%= @grocery_list.name %></h1>
+
+<%= form_with url: add_recipes_grocery_list_path(@grocery_list), method: :post, local: true do |form| %>
+  <div class="field">
+    <%= collection_check_boxes(:recipe_ids, :id, @recipes, :id, :name) %>
+  </div>
+
+  <%= form.submit 'Add Recipes' %>
+<% end %>
+
+<%= link_to 'Back', @grocery_list %>
