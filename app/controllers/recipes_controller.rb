@@ -31,6 +31,11 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    @recipe.destroy
+    redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -43,3 +48,5 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(:name, :description, :instructions, :special_notes, ingredients_attributes: [:id, :name, :amount, :_destroy])
   end
 end
+
+
