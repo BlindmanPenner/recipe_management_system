@@ -13,9 +13,9 @@ class RecipesController < ApplicationController
   end
 
   def new
-    # build a new recipe and ingredient
+    # build a new recipe and multiple ingredients
     @recipe = Recipe.new
-    @recipe.ingredients.build
+    3.times { @recipe.ingredients.build }  # Replace "3" with the desired number of initial ingredients
   end
 
   def create

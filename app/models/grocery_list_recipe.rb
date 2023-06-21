@@ -1,4 +1,4 @@
-class Ingredient < ApplicationRecord
+class GroceryListRecipe < ApplicationRecord
   belongs_to :recipe
-  validates :name, :amount, presence: true
+  belongs_to :grocery_list
 end

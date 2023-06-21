@@ -36,8 +36,6 @@ gem 'popper_js'
 # Add Bootstrap library
 gem 'bootstrap-sass', '~> 3.4.1'
 
-#  Add rails-ujs
-# gem 'rails-ujs', '5.1.0.beta1'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
