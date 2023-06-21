@@ -38,6 +38,9 @@ document.addEventListener('turbo:load', function() {
         document.body.appendChild(form);
         // Append the form to the document body
 
+        console.log(form);
+        // Log the form object to the console for debugging
+
         form.submit();
         // Submit the form (triggering the delete action)
       }
