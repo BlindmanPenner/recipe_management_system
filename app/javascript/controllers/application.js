@@ -1,9 +1,15 @@
-import { Application } from "@hotwired/stimulus"
+// Import and register all your controllers from the importmap under controllers/*
+import { application } from "controllers/application"
 
-const application = Application.start()
+// Eager load all controllers defined in the import map under controllers/**/*_controller
+import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
+eagerLoadControllersFrom("controllers", application)
 
-// Configure Stimulus development experience
-application.debug = false
-window.Stimulus   = application
+// Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
+// import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
+// lazyLoadControllersFrom("controllers", application)
 
-export { application }
+// Import additional JavaScript files
+import "controllers/delete_recipe" // Add this line to import delete_recipe.js
+
+// Leave the remaining lines unchanged

@@ -1,16 +1,16 @@
 <h1>Add Recipe Card</h1>
 
-  <% if @recipe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+<% if @recipe.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @recipe.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+    </ul>
+  </div>
+<% end %>
 
 <%= form_with(model: @recipe, local: true) do |form| %>
   <div class="field">
@@ -43,7 +43,7 @@
         <%= ingredient_form.text_field :amount %>
       </div>
     <% end %>
-    <%= link_to 'Add Ingredient', '#', class: 'add_ingredient' %>
+    <%= link_to 'Add Ingredient', '', class: 'add_ingredient' %>
   </div>
 
   <%= form.submit %>

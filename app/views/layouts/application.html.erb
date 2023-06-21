@@ -2,19 +2,21 @@
 <html>
   <head>
     <title>RecipeManagementSystem</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <%= javascript_include_tag 'delete_recipe' %>
-    <%= javascript_include_tag 'application' %>
-
-
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
     <%= yield %>
+
+    <!-- Add the following code -->
+    <script src="/assets/delete_recipe.js"></script>
+    <script src="/assets/recipes.js"></script>
+    <!-- End of added code -->
+
   </body>
 </html>

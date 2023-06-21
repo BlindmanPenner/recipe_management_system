@@ -1,13 +1,5 @@
-//= require jquery3
-//= require activestorage
-//= require popper
-//= require bootstrap-sprockets
-//= require_tree .
+import { Turbo } from "@hotwired/turbo-rails";
+import * as ActiveStorage from "@rails/activestorage";
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Your custom JavaScript code here
-
-    Rails.start()
-    Turbolinks.start()
-    ActiveStorage.start()
-  })
+Turbo.start();
+ActiveStorage.start();

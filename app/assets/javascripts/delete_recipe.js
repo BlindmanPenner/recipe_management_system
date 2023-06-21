@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('turbo:load', function() {
     var deleteButton = document.getElementById('delete-recipe');
     if (deleteButton) {
       deleteButton.addEventListener('click', function(event) {
